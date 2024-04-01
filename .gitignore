@@ -1,0 +1,6 @@
+*.json
+*.backup
+*.tfstate
+*.hcl
+*.13.0_x5
+*.0_x5
