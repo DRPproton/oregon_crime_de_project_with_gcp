@@ -27,3 +27,8 @@ resource "google_storage_bucket" "oregon-bucket" {
     }
   }
 }
+
+resource "google_bigquery_dataset" "crime-dataset" {
+  dataset_id = var.bq_dataset_name
+  location   = var.location
+}

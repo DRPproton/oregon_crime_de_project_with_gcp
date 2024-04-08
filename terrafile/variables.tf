@@ -5,7 +5,6 @@ variable "credentials" {
   #saved there as my-creds.json you could use default = "./keys/my-creds.json"
 }
 
-
 variable "project" {
   description = "Project"
   default = "oregon-crime"
@@ -29,4 +28,10 @@ variable "gcs_bucket_name" {
 variable "gcs_storage_class" {
   description = "Bucket Storage Class"
   default = "STANDARDs"
+}
+
+variable "bq_dataset_name" {
+  description = "My BigQuery Dataset Name"
+  #Update the below to what you want your dataset to be called
+  default     = "oregon_crime"
 }
