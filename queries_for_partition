@@ -1,0 +1,30 @@
+
+-- Creating partitioned and clustered tables for better querying
+CREATE OR REPLACE TABLE `oregon-crime.oregon_crime.crime_data_partitioned_clustered`
+PARTITION BY DATE (ReportDate)
+CLUSTER BY Neighborhood AS
+SELECT * FROM `oregon-crime.oregon_crime.crime_data`;
+
+
+CREATE OR REPLACE TABLE `oregon-crime.oregon_crime.arrests_data_partitioned_clustered`
+PARTITION BY DATE (date)
+CLUSTER BY county AS
+SELECT * FROM `oregon-crime.oregon_crime.arrests_data`;
+
+
+CREATE OR REPLACE TABLE `oregon-crime.oregon_crime.leoka_data_partitioned_clustered`
+PARTITION BY DATE (incidentdate)
+CLUSTER BY county AS
+SELECT * FROM `oregon-crime.oregon_crime.leoka_data`;
+
+
+CREATE OR REPLACE TABLE `oregon-crime.oregon_crime.offenses_data_partitioned_clustered`
+PARTITION BY DATE (incidentdate)
+CLUSTER BY county AS
+SELECT * FROM `oregon-crime.oregon_crime.offenses_data`;
+
+
+CREATE OR REPLACE TABLE `oregon-crime.oregon_crime.victims_data_partitioned_clustered`
+PARTITION BY DATE (incidentdate)
+CLUSTER BY county AS
+SELECT * FROM `oregon-crime.oregon_crime.victims_data`;
