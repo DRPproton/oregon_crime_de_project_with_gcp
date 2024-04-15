@@ -1,7 +1,7 @@
 # Data Engineering Project oregon_crime_de_project_with_gcp
 
 
-## Problem Statement: Consolidation and Preservation of Crime Data in Oregon**
+## Problem Statement: Consolidation and Preservation of Crime Data in Oregon
 
 **Background:**
 Crime data is a critical resource for law enforcement, policymakers, researchers, and the public to understand crime trends, develop safety strategies, and allocate resources effectively. In Oregon, crime data is currently distributed across various platforms and is only available in CSV format on the police public data websites. This scattered data structure poses significant challenges in terms of accessibility, analysis, and long-term data preservation.
